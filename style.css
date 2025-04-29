@@ -55,8 +55,8 @@ footer {
     position: fixed;
     height: 50px;
     width: 100%;
-    top: calc( 100vh - 50px );
-    margin: auto
+    bottom: 0.5vh;
+    margin: auto;
 }
 
 .vinyl {
