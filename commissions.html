@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- START INITIAL WEBSITE SETUP -->
+    <title>vinyl.horse | Commissions</title>
+    <link rel="icon" type="image/png" href="media/icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="media/icon/favicon.svg" />
+    <link rel="shortcut icon" href="media/icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="media/icon/apple-touch-icon.png" />
+    <link rel="manifest" href="media/icon/site.webmanifest" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="media/fonts/PerfectDOSVGA437Win.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="media/fonts/PerfectDOSVGA437.woff2" as="font" type="font/woff2">
+    <script>
+        function toggleVisible(){
+            var artStyle = document.getElementById("style");
+            var rows = document.getElementsByClassName("row");
+            for (let row = 0; row < rows.length; row++) {
+                rows.item(row).style.display = 'none';
+                try {document.getElementById(artStyle.value).style.display = "block";}
+                catch (error) {}
+            }
+        }
+    </script>
+</head>
+<!-- END INITIAL SETUP -->
+
+<!-- WEBSITE CONTENT SETUP -->
+
+<body>
+    <div class="center">
+        <h1>Commissions</h1>
+        <hr />
+        <p>Welcome to the commissions page, please use this form to send me your discord (preferred) or twitter username</p>
+        <p>I will reach out to you for further discussion once I recieved your request and I have avaliability to work on comms.</p>
+        <hr />
+    </div>
+
+    <div class="center">
+        <form class="commission" action="https://formspree.io/f/mvgdowkq" method="post">
+            <label for="email">Your Email</label><br \>
+            <input name="Email" id="email" type="email"><br \>
+            <label for="handle">Discord or Twitter handle:</label><br \>
+            <input name="Social Media Handle" id="handle" type="text" \><br \>
+            <label for="message">General Description of Commission:</label><br \>
+            <textarea name="message"></textarea><br \>
+            <label for="style">Style:</label>
+                <select id="style" name="style" onchange="toggleVisible()">
+                    <option selected=true value="">Select a style</option>
+                    <option value="5">Sketch ($5)</option>
+                    <option value="10">Simple Drawing ($10)</option>
+                    <option value="15">Simple Shading ($15)</option>
+                    <option value="-1">Experimental (Discuss)</option>
+                    <option value="-2">Non-Pony (Discuss)</option>
+                </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <p class="row center">Select a style above to show examples.</p>
+    <div id="5" class="row center" style="display: none;">
+        <div class="column">
+            <img src="media/images/Examples/Sketch 1.png">
+        </div>
+        <div class="column">
+            <img src="media/images/Examples/Sketch 2.png">
+        </div>
+    </div>
+    <div id="10" class="row center" style="display: none;">
+        <div class="column">
+            <img src="media/images/Examples/simple drawing 1.png">
+        </div>
+        <div class="column">
+            <img src="media/images/Examples/simple drawing 2.png">
+        </div>
+    </div>
+    <div id="15" class="row center" style="display: none;">
+        <div class="column">
+            <img src="media/images/Examples/simple shading 1.png">
+        </div>
+        <div class="column">
+            <img src="media/images/Examples/simple shading 2.png">
+        </div>
+    </div>
+    <div id="-1" class="row center" style="display: none;">
+        <div class="column">
+            <img src="media/images/Examples/experimental drawing 1.png">
+        </div>
+        <div class="column">
+            <img src="media/images/Examples/experimental drawing 2.png">
+        </div>
+    </div>
+    <div id="-2" class="row center" style="display: none;">
+        <div class="column">
+            <img src="media/images/Examples/non pony.png">
+        </div>
+        <!-- <div class="column">
+            <img src="media/images/Examples/non pony.png">
+        </div> -->
+    </div>
+
+    <a href="https://github.com/RoosterDragon/Desktop-Ponies"><img src="media/images/dance.gif" class="vinyl"></a>
+</body>
+
+</html>
