@@ -22,9 +22,21 @@
 body {
     background-color: black;
     color: #ddd;
-    padding: 10px;
+    margin: 0% 7%;
     font-size: 150%;
     font-family: 'Perfect DOS VGA 437 Win', 'Perfect DOS VGA 437', 'Consolas', monospace;
+    padding:0px;
+}
+
+hr {
+    color:aqua;
+    border-top: 2px double;
+    height:5px
+}
+
+h1 {
+    padding: 0px;
+    margin: 0px;
 }
 
 .center {
@@ -36,8 +48,8 @@ body {
 .linkwrapper {
     display: flex;
     justify-content: center;
-    margin: auto;
-    width:100%;
+    margin: 0;
+    width: inherit;
 }
 
 .links {
@@ -54,9 +66,9 @@ body {
 footer {
     position: fixed;
     height: 50px;
-    width: 100%;
+    width: 93%;
     bottom: 0.5vh;
-    margin: auto;
+    margin: 0;
 }
 
 .vinyl {
@@ -64,5 +76,53 @@ footer {
     right: 1vh;
     bottom: 1vh;
 }
+.commission input {
+    width: 20rem;
+    border-style:double;
+    border-color:aqua;
+    color:white;
+    background-color:black
+}
+.commission textarea {
+    width: 40rem;
+    border-style:double;
+    border-color:aqua;
+    color:white;
+    background-color:black
+}
 
+.commission button {
+    color: white;
+    background-color: black;
+    border-color:aqua;
+    border-width: 3px;
+    border-style:groove;
+}
 
+.commission select {
+    width: 10rem;
+    color:white;
+    background-color: black;
+    border-color:aqua;
+}
+.column {
+  float: left;
+  width: 50%;
+  max-width: 100%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row {
+    width: 75%
+    margin-left:12.5%
+}
+.column img {
+    box-sizing: border-box;
+    max-width: 50%;
+    margin: 3rem;
+    outline: 2px solid aqua;
+}
